@@ -77,7 +77,7 @@ fn void top5(Post*[] related, char[] score, Post[] ps) @inline {
 
 fn void main() {
 	String input = (String)file::load(mem, "../posts.json")!!;
-	Post[] posts = json::parse_posts(input)!!;
+	Post[] posts = json::parse_posts(mem, input)!!;
 
 	Clock start = clock::now();
 
